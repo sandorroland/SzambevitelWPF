@@ -1,0 +1,41 @@
+﻿<Window x:Class="SzambevitelWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SzambevitelWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel >
+            <TextBox x:Name="tbxBevitel"
+                     Margin="10,10,0,0"
+                     VerticalAlignment="Top"
+                     HorizontalAlignment="Left"
+                     Width="100"/>
+            <Button x:Name="btnHozzaad"
+                    Content="Hozzáad"
+                    Margin="10,30,0,0"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Left"
+                    Click="btnHozzaad_Click"/>
+            <RadioButton x:Name="rbnJelolt"
+                         Content="Jelölt"
+                         Margin="10,50,0,0"
+                         VerticalAlignment="Top"
+                         HorizontalAlignment="Left"
+                         Click="rbnJelolt_Click"/>
+            <RadioButton x:Name="rbnNemJelolt"
+                         Content="Jelöletlen"
+                         Margin="10,5,0,0"
+                         VerticalAlignment="Top"
+                         HorizontalAlignment="Left"
+                         Click="rbnNemJelolt_Click"/>
+        </StackPanel>
+        <StackPanel x:Name="HozzadPanel" Grid.Column="2"></StackPanel>
+    </Grid>
+</Window>
