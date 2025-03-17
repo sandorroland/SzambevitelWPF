@@ -69,5 +69,18 @@ namespace SzambevitelWPF
                 }
             }
         }
+
+        private void tbxBevitel_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if(!int.TryParse(tbxBevitel.Text, out int value))
+            {
+                MessageBox.Show("Nem megfelelő számformátum","Hiba",MessageBoxButton.OK, MessageBoxImage.Error);
+                tbxBevitel.Text = "0";
+            }
+          
+        }
+        //szorgalmi feladat
+        //oldd meg,hogy ne 0 alapértelmezett értékre álljon vissza, ha nem számot írunk be, hanem csak
+        //az utolsó beírt karaktert törölje ki
     }
 }

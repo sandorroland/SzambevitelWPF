@@ -16,7 +16,9 @@
                      Margin="10,10,0,0"
                      VerticalAlignment="Top"
                      HorizontalAlignment="Left"
-                     Width="100"/>
+                     Width="100"
+                     TextChanged="tbxBevitel_TextChanged"
+                     />
             <Button x:Name="btnHozzaad"
                     Content="Hozzáad"
                     Margin="10,30,0,0"
